@@ -28,12 +28,12 @@ a {
   overflow: hidden;
 }
 
-.login__bg{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.login__bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .login__container {
@@ -82,13 +82,9 @@ a {
   margin-bottom: 20px;
 }
 
-
-.login__remember *{
-    cursor: pointer;
+.login__remember * {
+  cursor: pointer;
 }
-
-
-
 
 .login__forget {
   color: white;
@@ -111,7 +107,41 @@ a {
   justify-content: center;
 }
 
-.register__link{
-    color: white;
-    font-weight: 700;
+.register__link {
+  color: white;
+  font-weight: 700;
+}
+
+#login__username:not(:placeholder-shown) {
+  color: #ff77ad;
+  font-weight: 600;
+}
+
+.login__container:focus-within .login__heading {
+  animation: color_change 5s ease-in-out infinite;
+}
+
+@keyframes color_change {
+  0% {
+    color: #FFCDEA;
+  }
+  30% {
+    color: #FB9AD1;
+  }
+
+  50% {
+    color: #BC7FCD;
+  }
+
+  70% {
+    color: #86469C;
+  }
+
+  80% {
+    color: #BC7FCD;
+  }
+
+  100% {
+    color: #FB9AD1;
+  }
 }
