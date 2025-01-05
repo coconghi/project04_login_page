@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <section class="login">
+      <div class="login__container">
+        <h1 class="login__heading">Login</h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="login__username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="login__password"
+            placeholder="Password"
+            required
+          />
+          <div class="login__action">
+            <div class="login__remember">
+              <input type="checkbox" name="remember" id="remember__checkbox"/>
+              <label for="remember__checkbox">Remember me</label>
+            </div>
+  
+            <a href="#!" id="forget" class="login__forget">Forgot Password?</a>
+          </div>
+          <input type="submit" value="Login" class="login__submit">
+        </form>
+        <div class="register">
+          <pre class="register__content">Don't have an account? </pre>
+          <a href="#!" class="register__link">Register</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

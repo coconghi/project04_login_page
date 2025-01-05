@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  height: 100vh;
+  background-image: url(/img/background-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__container {
+  width: 400px;
+  height: 500px;
+  backdrop-filter: blur(10px) brightness(95%);
+  color: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0px 0px 55px white;
+}
+
+.login__heading {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px white;
+}
+
+#login__username,
+#login__password {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+#login__username::placeholder,
+#login__password::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+#login__password {
+  margin-bottom: 20px;
+}
+
+.login__action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.login__remember *{
+    cursor: pointer;
+}
+
+
+
+
+.login__forget {
+  color: white;
+}
+
+.login__submit {
+  width: 100%;
+  line-height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+}
+
+.register__link{
+    color: white;
+    font-weight: 700;
+}
