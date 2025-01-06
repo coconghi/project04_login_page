@@ -112,36 +112,43 @@ a {
   font-weight: 700;
 }
 
+/* pseudo-class */
+
 #login__username:not(:placeholder-shown) {
   color: #ff77ad;
   font-weight: 600;
 }
 
-.login__container:focus-within .login__heading {
-  animation: color_change 5s ease-in-out infinite;
+.login__container:focus-within .login__submit {
+  animation: color_change 1.5s ease-in infinite;
+
 }
 
 @keyframes color_change {
   0% {
-    color: #FFCDEA;
+    background-color: #fcedf0;
   }
-  30% {
-    color: #FB9AD1;
+  14% {
+    background-color: #fde2e7;
   }
-
-  50% {
-    color: #BC7FCD;
+  28% {
+    background-color: #fcd7de;
   }
-
+  42% {
+    background-color: #fecbd4;
+  }
+  56% {
+    background-color: #fec0cb;
+  }
   70% {
-    color: #86469C;
+    background-color: #ffb5c2;
   }
-
-  80% {
-    color: #BC7FCD;
+  84% {
+    background-color: #fecbd4;
   }
-
   100% {
-    color: #FB9AD1;
+    background-color: #fcedf0;
   }
 }
+
+/* custom checkbox */
