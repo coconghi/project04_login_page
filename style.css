@@ -78,7 +78,7 @@ a {
 .login__action {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 20px;
 }
 
@@ -121,7 +121,6 @@ a {
 
 .login__container:focus-within .login__submit {
   animation: color_change 1.5s ease-in infinite;
-
 }
 
 @keyframes color_change {
@@ -151,4 +150,54 @@ a {
   }
 }
 
-/* custom checkbox */
+/* ================= custom checkbox ================= */
+/* tạo before và after của label */
+.login__remember label::before,
+.login__remember label::after {
+  content: "";
+  display: inline-block;
+}
+
+/* Dùng before để tạo ô vuông cho checkbox */
+.login__remember label::before {
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgb(255, 175, 201);
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+/* bỏ user-select khi click vào label */
+.login__remember label {
+  user-select: none;
+  /* dùng để căn giữa các phần tử của label */
+  display: inline-flex;
+  align-items: center;
+  /* dùng để căn after */
+  position: relative;
+}
+
+/* thay đổi style của thẻ before khi thẻ có type=checkbox đc checked */
+.login__remember [type="checkbox"]:checked ~ label::before {
+  background-color: rgb(255, 175, 201);
+}
+
+/* làm xuất hiện dấu tick khi checked. 
+Ý tưởng là làm 1 ô after nghiên 45deg, chỉ tô màu 2 cạnh
+và cho chồng lên ô before
+*/
+.login__remember [type="checkbox"]:checked ~ label::after {
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  rotate: -45deg;
+  position: absolute;
+  bottom: 7px;
+}
+
+/* ẩn checkbox ban đầu */
+.login__remember input {
+  display: none;
+}
